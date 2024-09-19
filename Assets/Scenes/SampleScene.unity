@@ -703,6 +703,7 @@ GameObject:
   - component: {fileID: 2027156459}
   - component: {fileID: 2027156460}
   - component: {fileID: 2027156461}
+  - component: {fileID: 2027156462}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Player
@@ -820,7 +821,7 @@ MonoBehaviour:
   thrustForce: 100
   rotationSpeed: 120
   gun: {fileID: 682111731}
-  bulletPrefab: {fileID: 4255253220769392473, guid: 87c96899fdc2f8a4aba46a0549147ebb, type: 3}
+  bulletPrefab: {fileID: 1787830187143722616, guid: 87c96899fdc2f8a4aba46a0549147ebb, type: 3}
 --- !u!136 &2027156461
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -844,6 +845,18 @@ CapsuleCollider:
   m_Height: 5
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2027156462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027156456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8d299c1a9b0ffb4ebb00a94560e9bae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

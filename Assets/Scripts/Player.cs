@@ -9,12 +9,14 @@ public class Player : MonoBehaviour
     public float thrustForce = 100f;
     public float rotationSpeed = 120f;
 
-    public GameObject gun, bulletPrefab;
+    public GameObject gun;
+    public Bullet bulletPrefab;
 
     public static int SCORE = 0;
     public static float xBorderLimit, yBorderLimit;
 
     private Rigidbody _rigid;
+    private BulletSpawner bulletSpawner;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +25,8 @@ public class Player : MonoBehaviour
 
         xBorderLimit = (Camera.main.orthographicSize+1) * Screen.width / Screen.height;
         yBorderLimit = Camera.main.orthographicSize+1;
+
+        bulletSpawner = GetComponent<BulletSpawner>();
     }
 
     // Update is called once per frame
@@ -56,15 +60,28 @@ public class Player : MonoBehaviour
         float rotation = -Input.GetAxis("Rotate") * Time.deltaTime;
         transform.Rotate(Vector3.forward, rotation * rotationSpeed);
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        /*if (Input.GetKeyDown(KeyCode.Space))
         {
-            GameObject bullet = Instantiate(bulletPrefab, gun.transform.position, Quaternion.identity);
-
+            //GameObject bullet = Instantiate(bulletPrefab, gun.transform.position, Quaternion.identity);
+            bulletSpawner._pool.Get();
             Bullet balaScript = bullet.GetComponent<Bullet>();
 
-            balaScript.targetVector = transform.right;
-        }
+            bullet.targetVector = transform.right;
+        }*/
+        HandleShooting();
     
+    }
+
+    private void HandleShooting()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            //GameObject bullet = Instantiate(bulletPrefab, gun.transform.position, Quaternion.identity);
+            Bullet bullet = bulletSpawner._pool.Get();
+            Bullet balaScript = bullet.GetComponent<Bullet>();
+
+            bullet.targetVector = transform.right;
+        }
     }
 
     private void OnCollisionEnter(Collision collision)

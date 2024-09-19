@@ -52,19 +52,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2572}
     - Class: 114
-      Script: {instanceID: 2774}
+      Script: {instanceID: 2578}
     - Class: 114
-      Script: {instanceID: 4914}
+      Script: {instanceID: 2776}
     - Class: 114
-      Script: {instanceID: 5216}
+      Script: {instanceID: 4916}
     - Class: 114
-      Script: {instanceID: 5518}
+      Script: {instanceID: 5218}
     - Class: 114
-      Script: {instanceID: 5982}
+      Script: {instanceID: 5520}
     - Class: 114
-      Script: {instanceID: 7188}
+      Script: {instanceID: 5984}
     - Class: 114
-      Script: {instanceID: 23098}
+      Script: {instanceID: 7190}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -196,6 +196,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.EventSystems
     className: EventSystem
+  - hash:
+      serializedVersion: 2
+      Hash: c5ae4ae86928ddd7b272794d8b154a51
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: EnemySpawner
   - hash:
       serializedVersion: 2
       Hash: 52db48e3be0a2b4f8b06f918fd1ebfbc
@@ -922,12 +928,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: c5ae4ae86928ddd7b272794d8b154a51
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: EnemySpawner
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
