@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2091748046282598460}
   - component: {fileID: 3207559735375085939}
   - component: {fileID: 1787830187143722616}
+  - component: {fileID: 324290980917502718}
   - component: {fileID: 1451324465340369211}
   m_Layer: 0
   m_Name: Bullet
@@ -99,8 +100,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  maxLifeTime: 5
+  maxLifeTime: 2
   targetVector: {x: 1, y: 0, z: 0}
+  enemyPool: {fileID: 324290980917502718}
+--- !u!114 &324290980917502718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4255253220769392473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0cd460865b4bf94aa843841b2ba7582, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!65 &1451324465340369211
 BoxCollider:
   m_ObjectHideFlags: 0

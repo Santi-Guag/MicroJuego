@@ -9,17 +9,20 @@ using UnityEngine.Pool;
 public class Bullet : MonoBehaviour
 {
     public float speed = 10f;
-    public float maxLifeTime = 3f;
+    public float maxLifeTime = 2f;
     public Vector3 targetVector;
 
     private ObjectPool<Bullet> _pool;
+    
+    public EnemyPool enemyPool;
+
 
     private Coroutine deactivateBulletAfterTimeCoroutine;
     // Start is called before the first frame update
     void Start()
     {
-        //Destroy(gameObject, maxLifeTime);
-        //deactivateBulletAfterTimeCoroutine = StartCoroutine(DeactivateBulletAfterTime());
+        enemyPool = GetComponent<EnemyPool>();
+
     }
 
     private void OnEnable()
@@ -31,25 +34,17 @@ public class Bullet : MonoBehaviour
     {
         transform.Translate(targetVector * speed * Time.deltaTime);
     }
-/*
-     private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Enemy"))
-        { 
-            IncrementScore();
-            Destroy(collision.gameObject);
-            //Destroy(gameObject);
-            _pool.Release(this);
-        }           
-    }*/
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Enemy"))
         {
             IncrementScore();
-            Destroy(other.gameObject);
-            //Destroy(gameObject);
+
             _pool.Release(this);
+            Asteroid asteroid = other.GetComponent<Asteroid>();
+            enemyPool._pool.Release(asteroid);
+
         }
     }
 

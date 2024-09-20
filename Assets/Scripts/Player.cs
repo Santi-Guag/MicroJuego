@@ -60,14 +60,6 @@ public class Player : MonoBehaviour
         float rotation = -Input.GetAxis("Rotate") * Time.deltaTime;
         transform.Rotate(Vector3.forward, rotation * rotationSpeed);
 
-        /*if (Input.GetKeyDown(KeyCode.Space))
-        {
-            //GameObject bullet = Instantiate(bulletPrefab, gun.transform.position, Quaternion.identity);
-            bulletSpawner._pool.Get();
-            Bullet balaScript = bullet.GetComponent<Bullet>();
-
-            bullet.targetVector = transform.right;
-        }*/
         HandleShooting();
     
     }
@@ -76,9 +68,7 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            //GameObject bullet = Instantiate(bulletPrefab, gun.transform.position, Quaternion.identity);
             Bullet bullet = bulletSpawner._pool.Get();
-            Bullet balaScript = bullet.GetComponent<Bullet>();
 
             bullet.targetVector = transform.right;
         }
