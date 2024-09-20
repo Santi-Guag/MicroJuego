@@ -1,7 +1,10 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - Asteroid
     - Bullet
+    - BulletSpawner
+    - EnemyPool
     - EnemySpawner
     - Player
     Unity.Rider.Editor.dll:
@@ -56,15 +59,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2776}
     - Class: 114
-      Script: {instanceID: 4916}
+      Script: {instanceID: 3970}
     - Class: 114
-      Script: {instanceID: 5218}
+      Script: {instanceID: 4918}
     - Class: 114
-      Script: {instanceID: 5520}
+      Script: {instanceID: 5220}
     - Class: 114
-      Script: {instanceID: 5984}
+      Script: {instanceID: 5522}
     - Class: 114
-      Script: {instanceID: 7190}
+      Script: {instanceID: 5986}
+    - Class: 114
+      Script: {instanceID: 7192}
+    - Class: 114
+      Script: {instanceID: 23806}
+    - Class: 114
+      Script: {instanceID: 23812}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -198,7 +207,7 @@ ScriptsOnlyBuild:
     className: EventSystem
   - hash:
       serializedVersion: 2
-      Hash: c5ae4ae86928ddd7b272794d8b154a51
+      Hash: 29763b62dac044ac8dbe41f645725fde
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: EnemySpawner
@@ -444,6 +453,12 @@ ScriptsOnlyBuild:
     className: VariablesSaver
   - hash:
       serializedVersion: 2
+      Hash: a3b419ab73400edb9296241402f9f244
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: BulletSpawner
+  - hash:
+      serializedVersion: 2
       Hash: 7053e305cdc1eb560f4c3be49d3b5136
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.EventSystems
@@ -588,7 +603,7 @@ ScriptsOnlyBuild:
     className: HorizontalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 0bdb47ceeef923c5b1cf3ab02b2a5fb8
+      Hash: bd130a2ab0787e5a585f6c1e817cd739
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Bullet
@@ -852,7 +867,7 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
-      Hash: 72a2a2fc7228951b22c7d18cc451c5f6
+      Hash: 251e17eb8fd250ab4517bf0932f773bc
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Player
@@ -928,6 +943,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: d978cee12ca8f241680b7d568892d2e1
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Asteroid
+  - hash:
+      serializedVersion: 2
+      Hash: 571a7244fa0200186bec38f4bb2219bd
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: EnemyPool
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
